@@ -1,0 +1,16 @@
+E:\Documents\GitHub\pav1\Cruceros\WindowsApp1\obj\Debug\WindowsApp1.vbprojResolveAssemblyReference.cache
+E:\Documents\GitHub\pav1\Cruceros\WindowsApp1\obj\Debug\WindowsApp1.frm_abm_cubierta.resources
+E:\Documents\GitHub\pav1\Cruceros\WindowsApp1\obj\Debug\WindowsApp1.frm_abm_navio.resources
+E:\Documents\GitHub\pav1\Cruceros\WindowsApp1\obj\Debug\WindowsApp1.frm_navios.resources
+E:\Documents\GitHub\pav1\Cruceros\WindowsApp1\obj\Debug\WindowsApp1.Resources.resources
+E:\Documents\GitHub\pav1\Cruceros\WindowsApp1\obj\Debug\WindowsApp1.vbproj.GenerateResource.Cache
+E:\Documents\GitHub\pav1\Cruceros\WindowsApp1\obj\Debug\WindowsApp1.vbproj.CoreCompileInputs.cache
+E:\Documents\GitHub\pav1\Cruceros\WindowsApp1\bin\Debug\WindowsApp1.exe.config
+E:\Documents\GitHub\pav1\Cruceros\WindowsApp1\bin\Debug\WindowsApp1.exe
+E:\Documents\GitHub\pav1\Cruceros\WindowsApp1\bin\Debug\WindowsApp1.pdb
+E:\Documents\GitHub\pav1\Cruceros\WindowsApp1\bin\Debug\WindowsApp1.xml
+E:\Documents\GitHub\pav1\Cruceros\WindowsApp1\obj\Debug\WindowsApp1.exe
+E:\Documents\GitHub\pav1\Cruceros\WindowsApp1\obj\Debug\WindowsApp1.xml
+E:\Documents\GitHub\pav1\Cruceros\WindowsApp1\obj\Debug\WindowsApp1.pdb
+E:\Documents\GitHub\pav1\Cruceros\WindowsApp1\obj\Debug\WindowsApp1.frm_login.resources
+E:\Documents\GitHub\pav1\Cruceros\WindowsApp1\obj\Debug\WindowsApp1.frm_principal.resources

@@ -9,7 +9,7 @@ Public Class BDHelper
     Private Shared instance As BDHelper 'Unica instancia de la clase
 
     Private Sub New()
-        string_conexion = "Data Source=DESKTOP-PDM4U1M\SQLEXPRESS;Initial Catalog=DB_Cruceros;Persist Security Info=True;User ID=sa;Password=123456"
+        string_conexion = "Data Source=DESKTOP-PDM4U1M\SQLEXPRESS;Initial Catalog=DB_Cruceros2;Persist Security Info=True;User ID=sa;Password=123456"
     End Sub
 
     Public Shared Function getDBHelper() As BDHelper
@@ -111,5 +111,39 @@ Public Class BDHelper
             'Dispose() libera los recursos asociados a la conexón
             conexion.Dispose()
         End Try
+    End Function
+
+    Public Function EjecutarSQLConParametros(ByVal sqlStr As String, ByVal params As Object())
+        ' Se utiliza para sentencias SQL del tipo “Insert/Update/Delete”
+        ' La función recibe por valor una sentencia sql como string y un arreglo de parámetros
+
+        Dim conexion As New SqlConnection
+        Dim cmd As New SqlCommand
+        Dim tabla As New DataTable
+        Dim n_param As String
+        Try
+            conexion.ConnectionString = string_conexion
+            conexion.Open()
+            cmd.Connection = conexion
+            cmd.CommandType = CommandType.Text
+            cmd.CommandText = sqlStr
+
+            For i = 0 To params.Length - 1
+                If Not IsNothing(params(i)) Then
+                    n_param = "param" + Convert.ToString(i + 1)
+                    cmd.Parameters.AddWithValue(n_param, params(i))
+                End If
+            Next
+
+            cmd.ExecuteNonQuery()
+
+        Catch ex As Exception
+            Throw ex
+        Finally
+            If conexion.State = ConnectionState.Open Then conexion.Close()
+            'Dispose() libera los recursos asociados a la conexón
+            conexion.Dispose()
+        End Try
+        Return ""
     End Function
 End Class

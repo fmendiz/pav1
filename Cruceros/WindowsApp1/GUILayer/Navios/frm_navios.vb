@@ -1,12 +1,9 @@
 ﻿Public Class frm_navios
-    Private Sub btn_nuevo_Click(sender As Object, e As EventArgs) Handles btn_nuevo.Click
-        frm_abm_navio.ShowDialog()
-    End Sub
 
     Private Sub llenarGrid(ByVal source As DataTable)
         dgv_navios.Rows.Clear()
         For Each fila As DataRow In source.Rows
-            dgv_navios.Rows.Add(New String() {fila.Item("id_bug").ToString, fila.Item("fecha").ToString, fila.Item("titulo").ToString, fila.Item("nombre").ToString, fila.Item("n_estado").ToString, fila.Item("n_prioridad").ToString, fila.Item("n_criticidad").ToString, fila.Item("n_usuario").ToString, fila.Item("descripcion").ToString, fila.Item("id_estado").ToString, fila.Item("id_criticidad").ToString, fila.Item("id_prioridad").ToString, fila.Item("id_producto").ToString, fila.Item("asignado_a").ToString})
+            dgv_navios.Rows.Add(New String() {fila.Item("nombre").ToString, fila.Item("altura").ToString, fila.Item("eslora").ToString, fila.Item("manga").ToString, fila.Item("autonomia").ToString, fila.Item("motores").ToString, fila.Item("tripulantes").ToString, fila.Item("clasificacion").ToString})
         Next
     End Sub
 
@@ -20,12 +17,32 @@
         If dgv_navios.Rows.Count = 0 Then
             MessageBox.Show("No se encontraron coincidencias para el/los filtros ingresados",
                     "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information)
-
-            clear_components()
         End If
     End Sub
 
-    Private Sub clear_components()
+    Private Sub dgv_navios_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgv_navios.CellContentClick
+        btn_editar.Enabled = True
+        btn_quitar.Enabled = True
+    End Sub
 
+    Private Sub btn_salir_Click(sender As Object, e As EventArgs) Handles btn_salir.Click
+        'Confirmación de salida.
+        If MessageBox.Show("Seguro que desea salir?",
+                "Aviso", MessageBoxButtons.OKCancel, MessageBoxIcon.Question _
+                , MessageBoxDefaultButton.Button1) = Windows.Forms.DialogResult.OK Then
+            Me.Close()
+        End If
+    End Sub
+
+    Private Sub btn_nuevo_Click(sender As Object, e As EventArgs) Handles btn_nuevo.Click
+        frm_abm_navio.ShowDialog()
+    End Sub
+
+    Private Sub btn_editar_Click(sender As Object, e As EventArgs) Handles btn_editar.Click
+        frm_abm_navio.ShowDialog()
+    End Sub
+
+    Private Sub btn_buscar_Click(sender As Object, e As EventArgs) Handles btn_buscar.Click
+        frm_abm_navio.ShowDialog()
     End Sub
 End Class

@@ -23,25 +23,25 @@ Partial Class frm_abm_navio
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frm_abm_navio))
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txt_nombre = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.txt_eslora = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.txt_manga = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.txt_desplazamiento = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.txt_autonomia = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
+        Me.txt_motores = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.TextBox8 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.txt_tripulantes = New System.Windows.Forms.TextBox()
+        Me.txt_altura = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
+        Me.btn_guardar = New System.Windows.Forms.Button()
+        Me.btn_cancelar = New System.Windows.Forms.Button()
         Me.btn_estrella1 = New System.Windows.Forms.Button()
         Me.btn_estrella2 = New System.Windows.Forms.Button()
         Me.btn_estrella3 = New System.Windows.Forms.Button()
@@ -54,12 +54,12 @@ Partial Class frm_abm_navio
         Me.Button5 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
-        'TextBox1
+        'txt_nombre
         '
-        Me.TextBox1.Location = New System.Drawing.Point(40, 56)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(188, 20)
-        Me.TextBox1.TabIndex = 0
+        Me.txt_nombre.Location = New System.Drawing.Point(40, 56)
+        Me.txt_nombre.Name = "txt_nombre"
+        Me.txt_nombre.Size = New System.Drawing.Size(188, 20)
+        Me.txt_nombre.TabIndex = 0
         '
         'Label1
         '
@@ -94,12 +94,12 @@ Partial Class frm_abm_navio
         Me.Label3.TabIndex = 5
         Me.Label3.Text = "Eslora:"
         '
-        'TextBox3
+        'txt_eslora
         '
-        Me.TextBox3.Location = New System.Drawing.Point(192, 107)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(112, 20)
-        Me.TextBox3.TabIndex = 4
+        Me.txt_eslora.Location = New System.Drawing.Point(192, 107)
+        Me.txt_eslora.Name = "txt_eslora"
+        Me.txt_eslora.Size = New System.Drawing.Size(112, 20)
+        Me.txt_eslora.TabIndex = 4
         '
         'Label4
         '
@@ -112,12 +112,12 @@ Partial Class frm_abm_navio
         Me.Label4.TabIndex = 7
         Me.Label4.Text = "Manga:"
         '
-        'TextBox4
+        'txt_manga
         '
-        Me.TextBox4.Location = New System.Drawing.Point(40, 165)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(112, 20)
-        Me.TextBox4.TabIndex = 6
+        Me.txt_manga.Location = New System.Drawing.Point(40, 165)
+        Me.txt_manga.Name = "txt_manga"
+        Me.txt_manga.Size = New System.Drawing.Size(112, 20)
+        Me.txt_manga.TabIndex = 6
         '
         'Label5
         '
@@ -130,12 +130,12 @@ Partial Class frm_abm_navio
         Me.Label5.TabIndex = 9
         Me.Label5.Text = "Desplazamiento:"
         '
-        'TextBox5
+        'txt_desplazamiento
         '
-        Me.TextBox5.Location = New System.Drawing.Point(192, 165)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(112, 20)
-        Me.TextBox5.TabIndex = 8
+        Me.txt_desplazamiento.Location = New System.Drawing.Point(192, 165)
+        Me.txt_desplazamiento.Name = "txt_desplazamiento"
+        Me.txt_desplazamiento.Size = New System.Drawing.Size(112, 20)
+        Me.txt_desplazamiento.TabIndex = 8
         '
         'Label6
         '
@@ -148,12 +148,12 @@ Partial Class frm_abm_navio
         Me.Label6.TabIndex = 11
         Me.Label6.Text = "Autonomia:"
         '
-        'TextBox6
+        'txt_autonomia
         '
-        Me.TextBox6.Location = New System.Drawing.Point(40, 223)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(112, 20)
-        Me.TextBox6.TabIndex = 10
+        Me.txt_autonomia.Location = New System.Drawing.Point(40, 223)
+        Me.txt_autonomia.Name = "txt_autonomia"
+        Me.txt_autonomia.Size = New System.Drawing.Size(112, 20)
+        Me.txt_autonomia.TabIndex = 10
         '
         'Label7
         '
@@ -166,12 +166,12 @@ Partial Class frm_abm_navio
         Me.Label7.TabIndex = 13
         Me.Label7.Text = "Motores:"
         '
-        'TextBox7
+        'txt_motores
         '
-        Me.TextBox7.Location = New System.Drawing.Point(192, 223)
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(112, 20)
-        Me.TextBox7.TabIndex = 12
+        Me.txt_motores.Location = New System.Drawing.Point(192, 223)
+        Me.txt_motores.Name = "txt_motores"
+        Me.txt_motores.Size = New System.Drawing.Size(112, 20)
+        Me.txt_motores.TabIndex = 12
         '
         'Label8
         '
@@ -184,19 +184,19 @@ Partial Class frm_abm_navio
         Me.Label8.TabIndex = 15
         Me.Label8.Text = "Tripulantes:"
         '
-        'TextBox8
+        'txt_tripulantes
         '
-        Me.TextBox8.Location = New System.Drawing.Point(40, 279)
-        Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.Size = New System.Drawing.Size(112, 20)
-        Me.TextBox8.TabIndex = 14
+        Me.txt_tripulantes.Location = New System.Drawing.Point(40, 279)
+        Me.txt_tripulantes.Name = "txt_tripulantes"
+        Me.txt_tripulantes.Size = New System.Drawing.Size(112, 20)
+        Me.txt_tripulantes.TabIndex = 14
         '
-        'TextBox2
+        'txt_altura
         '
-        Me.TextBox2.Location = New System.Drawing.Point(40, 107)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(112, 20)
-        Me.TextBox2.TabIndex = 16
+        Me.txt_altura.Location = New System.Drawing.Point(40, 107)
+        Me.txt_altura.Name = "txt_altura"
+        Me.txt_altura.Size = New System.Drawing.Size(112, 20)
+        Me.txt_altura.TabIndex = 16
         '
         'Label9
         '
@@ -209,23 +209,23 @@ Partial Class frm_abm_navio
         Me.Label9.TabIndex = 17
         Me.Label9.Text = "Clasificacion:"
         '
-        'Button2
+        'btn_guardar
         '
-        Me.Button2.Location = New System.Drawing.Point(270, 404)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 20
-        Me.Button2.Text = "Guardar"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.btn_guardar.Location = New System.Drawing.Point(270, 404)
+        Me.btn_guardar.Name = "btn_guardar"
+        Me.btn_guardar.Size = New System.Drawing.Size(75, 23)
+        Me.btn_guardar.TabIndex = 20
+        Me.btn_guardar.Text = "Guardar"
+        Me.btn_guardar.UseVisualStyleBackColor = True
         '
-        'Button3
+        'btn_cancelar
         '
-        Me.Button3.Location = New System.Drawing.Point(185, 404)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(75, 23)
-        Me.Button3.TabIndex = 21
-        Me.Button3.Text = "Cancelar"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.btn_cancelar.Location = New System.Drawing.Point(185, 404)
+        Me.btn_cancelar.Name = "btn_cancelar"
+        Me.btn_cancelar.Size = New System.Drawing.Size(75, 23)
+        Me.btn_cancelar.TabIndex = 21
+        Me.btn_cancelar.Text = "Cancelar"
+        Me.btn_cancelar.UseVisualStyleBackColor = True
         '
         'btn_estrella1
         '
@@ -343,25 +343,25 @@ Partial Class frm_abm_navio
         Me.Controls.Add(Me.btn_estrella3)
         Me.Controls.Add(Me.btn_estrella2)
         Me.Controls.Add(Me.btn_estrella1)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.btn_cancelar)
+        Me.Controls.Add(Me.btn_guardar)
         Me.Controls.Add(Me.Label9)
-        Me.Controls.Add(Me.TextBox2)
+        Me.Controls.Add(Me.txt_altura)
         Me.Controls.Add(Me.Label8)
-        Me.Controls.Add(Me.TextBox8)
+        Me.Controls.Add(Me.txt_tripulantes)
         Me.Controls.Add(Me.Label7)
-        Me.Controls.Add(Me.TextBox7)
+        Me.Controls.Add(Me.txt_motores)
         Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.TextBox6)
+        Me.Controls.Add(Me.txt_autonomia)
         Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.TextBox5)
+        Me.Controls.Add(Me.txt_desplazamiento)
         Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.TextBox4)
+        Me.Controls.Add(Me.txt_manga)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.TextBox3)
+        Me.Controls.Add(Me.txt_eslora)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.txt_nombre)
         Me.Name = "frm_abm_navio"
         Me.Text = "Navios"
         Me.ResumeLayout(False)
@@ -369,25 +369,25 @@ Partial Class frm_abm_navio
 
     End Sub
 
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txt_nombre As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents txt_eslora As TextBox
     Friend WithEvents Label4 As Label
-    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents txt_manga As TextBox
     Friend WithEvents Label5 As Label
-    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents txt_desplazamiento As TextBox
     Friend WithEvents Label6 As Label
-    Friend WithEvents TextBox6 As TextBox
+    Friend WithEvents txt_autonomia As TextBox
     Friend WithEvents Label7 As Label
-    Friend WithEvents TextBox7 As TextBox
+    Friend WithEvents txt_motores As TextBox
     Friend WithEvents Label8 As Label
-    Friend WithEvents TextBox8 As TextBox
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents txt_tripulantes As TextBox
+    Friend WithEvents txt_altura As TextBox
     Friend WithEvents Label9 As Label
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button3 As Button
+    Friend WithEvents btn_guardar As Button
+    Friend WithEvents btn_cancelar As Button
     Friend WithEvents btn_estrella1 As Button
     Friend WithEvents btn_estrella2 As Button
     Friend WithEvents btn_estrella3 As Button

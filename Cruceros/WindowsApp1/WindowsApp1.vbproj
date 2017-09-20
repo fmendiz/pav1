@@ -46,6 +46,9 @@
   <PropertyGroup>
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>estrella.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -72,7 +75,22 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BusinessLayer\Entities\Usuario.vb" />
+    <Compile Include="BusinessLayer\Services\UsuarioService.vb" />
+    <Compile Include="DataLayer\DAOs\UsuarioDao.vb" />
     <Compile Include="DataLayer\helper\DBHelper.vb" />
+    <Compile Include="GUILayer\Login\frm_login.Designer.vb">
+      <DependentUpon>frm_login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUILayer\Login\frm_login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\Login\frm_principal.Designer.vb">
+      <DependentUpon>frm_principal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUILayer\Login\frm_principal.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="GUILayer\Navios\frm_abm_cubierta.Designer.vb">
       <DependentUpon>frm_abm_cubierta.vb</DependentUpon>
     </Compile>
@@ -108,6 +126,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="GUILayer\Login\frm_login.resx">
+      <DependentUpon>frm_login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\Login\frm_principal.resx">
+      <DependentUpon>frm_principal.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUILayer\Navios\frm_abm_cubierta.resx">
       <DependentUpon>frm_abm_cubierta.vb</DependentUpon>
     </EmbeddedResource>
@@ -137,15 +161,15 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="BusinessLayer\Entities\" />
-    <Folder Include="DataLayer\DAOs\" />
     <Folder Include="GUILayer\Itinerarios\" />
-    <Folder Include="GUILayer\Login\" />
     <Folder Include="GUILayer\Pasajeros\" />
     <Folder Include="GUILayer\Puertos\" />
     <Folder Include="GUILayer\Reservas\" />
     <Folder Include="GUILayer\Tripulantes\" />
     <Folder Include="Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="estrella.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

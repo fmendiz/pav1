@@ -31,16 +31,11 @@ Partial Class frm_navios
         Me.motores = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.tripulantes = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.clasificacion = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btn_salir = New System.Windows.Forms.Button()
         Me.btn_nuevo = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
-        Me.Buscar = New System.Windows.Forms.Button()
-        Me.lbl_cant_motores = New System.Windows.Forms.Label()
-        Me.lbl_clasificacion = New System.Windows.Forms.Label()
-        Me.lbl_filtrar = New System.Windows.Forms.Label()
+        Me.btn_editar = New System.Windows.Forms.Button()
+        Me.btn_quitar = New System.Windows.Forms.Button()
+        Me.btn_buscar = New System.Windows.Forms.Button()
         CType(Me.dgv_navios, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -48,9 +43,9 @@ Partial Class frm_navios
         '
         Me.dgv_navios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgv_navios.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.nombre, Me.altura, Me.eslora, Me.manga, Me.autonomia, Me.motores, Me.tripulantes, Me.clasificacion})
-        Me.dgv_navios.Location = New System.Drawing.Point(11, 127)
+        Me.dgv_navios.Location = New System.Drawing.Point(11, 75)
         Me.dgv_navios.Name = "dgv_navios"
-        Me.dgv_navios.Size = New System.Drawing.Size(633, 271)
+        Me.dgv_navios.Size = New System.Drawing.Size(633, 221)
         Me.dgv_navios.TabIndex = 0
         '
         'nombre
@@ -100,121 +95,68 @@ Partial Class frm_navios
         Me.clasificacion.Name = "clasificacion"
         Me.clasificacion.Width = 70
         '
-        'Button1
+        'btn_salir
         '
-        Me.Button1.Location = New System.Drawing.Point(529, 418)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(115, 25)
-        Me.Button1.TabIndex = 1
-        Me.Button1.Text = "Salir"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btn_salir.Location = New System.Drawing.Point(529, 314)
+        Me.btn_salir.Name = "btn_salir"
+        Me.btn_salir.Size = New System.Drawing.Size(115, 25)
+        Me.btn_salir.TabIndex = 1
+        Me.btn_salir.Text = "Salir"
+        Me.btn_salir.UseVisualStyleBackColor = True
         '
         'btn_nuevo
         '
-        Me.btn_nuevo.Location = New System.Drawing.Point(49, 81)
+        Me.btn_nuevo.Location = New System.Drawing.Point(49, 31)
         Me.btn_nuevo.Name = "btn_nuevo"
         Me.btn_nuevo.Size = New System.Drawing.Size(115, 25)
         Me.btn_nuevo.TabIndex = 2
         Me.btn_nuevo.Text = "Nuevo"
         Me.btn_nuevo.UseVisualStyleBackColor = True
         '
-        'Button3
+        'btn_editar
         '
-        Me.Button3.Location = New System.Drawing.Point(185, 81)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(121, 25)
-        Me.Button3.TabIndex = 3
-        Me.Button3.Text = "Modificar"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.btn_editar.Enabled = False
+        Me.btn_editar.Location = New System.Drawing.Point(185, 31)
+        Me.btn_editar.Name = "btn_editar"
+        Me.btn_editar.Size = New System.Drawing.Size(121, 25)
+        Me.btn_editar.TabIndex = 3
+        Me.btn_editar.Text = "Modificar"
+        Me.btn_editar.UseVisualStyleBackColor = True
         '
-        'Button4
+        'btn_quitar
         '
-        Me.Button4.Location = New System.Drawing.Point(324, 81)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(121, 25)
-        Me.Button4.TabIndex = 4
-        Me.Button4.Text = "Eliminar"
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.btn_quitar.Enabled = False
+        Me.btn_quitar.Location = New System.Drawing.Point(324, 31)
+        Me.btn_quitar.Name = "btn_quitar"
+        Me.btn_quitar.Size = New System.Drawing.Size(121, 25)
+        Me.btn_quitar.TabIndex = 4
+        Me.btn_quitar.Text = "Eliminar"
+        Me.btn_quitar.UseVisualStyleBackColor = True
         '
-        'ComboBox2
+        'btn_buscar
         '
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(185, 37)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(121, 21)
-        Me.ComboBox2.TabIndex = 6
-        '
-        'ComboBox3
-        '
-        Me.ComboBox3.FormattingEnabled = True
-        Me.ComboBox3.Location = New System.Drawing.Point(324, 37)
-        Me.ComboBox3.Name = "ComboBox3"
-        Me.ComboBox3.Size = New System.Drawing.Size(121, 21)
-        Me.ComboBox3.TabIndex = 12
-        '
-        'Buscar
-        '
-        Me.Buscar.Location = New System.Drawing.Point(471, 83)
-        Me.Buscar.Name = "Buscar"
-        Me.Buscar.Size = New System.Drawing.Size(121, 23)
-        Me.Buscar.TabIndex = 13
-        Me.Buscar.Text = "Busqueda Avanzada"
-        Me.Buscar.UseVisualStyleBackColor = True
-        '
-        'lbl_cant_motores
-        '
-        Me.lbl_cant_motores.AutoSize = True
-        Me.lbl_cant_motores.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_cant_motores.ForeColor = System.Drawing.Color.Gray
-        Me.lbl_cant_motores.Location = New System.Drawing.Point(182, 19)
-        Me.lbl_cant_motores.Name = "lbl_cant_motores"
-        Me.lbl_cant_motores.Size = New System.Drawing.Size(96, 15)
-        Me.lbl_cant_motores.TabIndex = 15
-        Me.lbl_cant_motores.Text = "Cant motores:"
-        '
-        'lbl_clasificacion
-        '
-        Me.lbl_clasificacion.AutoSize = True
-        Me.lbl_clasificacion.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_clasificacion.ForeColor = System.Drawing.Color.Gray
-        Me.lbl_clasificacion.Location = New System.Drawing.Point(321, 19)
-        Me.lbl_clasificacion.Name = "lbl_clasificacion"
-        Me.lbl_clasificacion.Size = New System.Drawing.Size(93, 15)
-        Me.lbl_clasificacion.TabIndex = 16
-        Me.lbl_clasificacion.Text = "Clasificacion:"
-        '
-        'lbl_filtrar
-        '
-        Me.lbl_filtrar.AutoSize = True
-        Me.lbl_filtrar.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_filtrar.ForeColor = System.Drawing.Color.Gray
-        Me.lbl_filtrar.Location = New System.Drawing.Point(81, 36)
-        Me.lbl_filtrar.Name = "lbl_filtrar"
-        Me.lbl_filtrar.Size = New System.Drawing.Size(52, 18)
-        Me.lbl_filtrar.TabIndex = 17
-        Me.lbl_filtrar.Text = "Filtrar"
+        Me.btn_buscar.Location = New System.Drawing.Point(471, 33)
+        Me.btn_buscar.Name = "btn_buscar"
+        Me.btn_buscar.Size = New System.Drawing.Size(121, 23)
+        Me.btn_buscar.TabIndex = 13
+        Me.btn_buscar.Text = "Busqueda Avanzada"
+        Me.btn_buscar.UseVisualStyleBackColor = True
         '
         'frm_navios
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(661, 456)
-        Me.Controls.Add(Me.lbl_filtrar)
-        Me.Controls.Add(Me.lbl_clasificacion)
-        Me.Controls.Add(Me.lbl_cant_motores)
-        Me.Controls.Add(Me.Buscar)
-        Me.Controls.Add(Me.ComboBox3)
-        Me.Controls.Add(Me.ComboBox2)
-        Me.Controls.Add(Me.Button4)
-        Me.Controls.Add(Me.Button3)
+        Me.ClientSize = New System.Drawing.Size(657, 351)
+        Me.Controls.Add(Me.btn_buscar)
+        Me.Controls.Add(Me.btn_quitar)
+        Me.Controls.Add(Me.btn_editar)
         Me.Controls.Add(Me.btn_nuevo)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.btn_salir)
         Me.Controls.Add(Me.dgv_navios)
         Me.Name = "frm_navios"
         Me.Text = "frm_navios"
         CType(Me.dgv_navios, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
 
@@ -227,14 +169,9 @@ Partial Class frm_navios
     Friend WithEvents motores As DataGridViewTextBoxColumn
     Friend WithEvents tripulantes As DataGridViewTextBoxColumn
     Friend WithEvents clasificacion As DataGridViewTextBoxColumn
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btn_salir As Button
     Friend WithEvents btn_nuevo As Button
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Button4 As Button
-    Friend WithEvents ComboBox2 As ComboBox
-    Friend WithEvents ComboBox3 As ComboBox
-    Friend WithEvents Buscar As Button
-    Friend WithEvents lbl_cant_motores As Label
-    Friend WithEvents lbl_clasificacion As Label
-    Friend WithEvents lbl_filtrar As Label
+    Friend WithEvents btn_editar As Button
+    Friend WithEvents btn_quitar As Button
+    Friend WithEvents btn_buscar As Button
 End Class
