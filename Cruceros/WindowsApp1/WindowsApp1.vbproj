@@ -73,6 +73,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataLayer\helper\DBHelper.vb" />
+    <Compile Include="GUILayer\Navios\frm_abm_cubierta.Designer.vb">
+      <DependentUpon>frm_abm_cubierta.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUILayer\Navios\frm_abm_cubierta.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="GUILayer\Navios\frm_abm_navio.Designer.vb">
       <DependentUpon>frm_abm_navio.vb</DependentUpon>
     </Compile>
@@ -102,6 +108,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="GUILayer\Navios\frm_abm_cubierta.resx">
+      <DependentUpon>frm_abm_cubierta.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUILayer\Navios\frm_abm_navio.resx">
       <DependentUpon>frm_abm_navio.vb</DependentUpon>
     </EmbeddedResource>
