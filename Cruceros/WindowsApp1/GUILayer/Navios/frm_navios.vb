@@ -1,18 +1,19 @@
 ﻿Public Class frm_navios
+    Private oNavioService As New NavioService
 
-    Private Sub llenarGrid(ByVal source As DataTable)
+    Private Sub llenarGrid(ByVal source As IList(Of Navio))
         dgv_navios.Rows.Clear()
-        For Each fila As DataRow In source.Rows
-            dgv_navios.Rows.Add(New String() {fila.Item("nombre").ToString, fila.Item("altura").ToString, fila.Item("eslora").ToString, fila.Item("manga").ToString, fila.Item("autonomia").ToString, fila.Item("motores").ToString, fila.Item("tripulantes").ToString, fila.Item("clasificacion").ToString})
+        For Each oNavio As Navio In source
+            Dim estrellas As String = String.Empty
+            dgv_navios.Rows.Add(New String() {oNavio.nombre, oNavio.altura, oNavio.eslora, oNavio.manga, oNavio.autonomia, oNavio.motores, oNavio.tripulantes, oNavio.clasificacion})
         Next
     End Sub
 
     Private Sub frm_navios_Load(sender As Object, e As EventArgs) Handles Me.Load
         'Recuperar datos actualizar grid...
         Dim filters As New List(Of Object)
-        Dim str As String = "SELECT * FROM navios"
-        'llamar a 'llenarGrid()' llenar la grilla a partir del DataTable obtenido.
-        llenarGrid(BDHelper.getDBHelper.ConsultaSQL(str))
+
+        llenarGrid(oNavioService.traerTodos())
 
         If dgv_navios.Rows.Count = 0 Then
             MessageBox.Show("No se encontraron coincidencias para el/los filtros ingresados",
